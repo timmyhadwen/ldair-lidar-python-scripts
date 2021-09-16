@@ -28,7 +28,7 @@ def parsePacket():
 
     header = d[0]
     ver_len = d[1]
-    speed = d[3] << 8 | d[2]) 
+    speed = d[3] << 8 | d[2]
 
     start_angle = d[5] << 8 | d [4]
     end_angle = d[43] << 8 | d[42]
@@ -44,7 +44,7 @@ def parsePacket():
         if (angle < 360):
             distance_readings[angle] = distance
  
-    timestamp = d[45] << 8 | d[44])
+    timestamp = d[45] << 8 | d[44]
     crc8 = d[46]
 
     prettyPrintDistance()
